@@ -1,5 +1,12 @@
 <nav class="header-nav reveal">
-  <a href="{{ '/' | relative_url }}" class="header-logo" title="{{ site.name }}">{{ site.name }}</a>
+  {% if site.logo_image %}
+    <a href="{{ '/' | relative_url }}" class="header-logo with-image" title="{{ site.name }}">
+      <img src="{% asset_path '{{ site.logo_image }}' %}" alt="" />
+    </a>
+  {% else %}
+    <a href="{{ '/' | relative_url }}" class="header-logo" title="{{ site.name }}">{{ site.name }}</a>
+  {% endif %}
+
   <ul class="header-links">
     {% if site.about_enabled == true %}
       <li>

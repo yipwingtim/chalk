@@ -16,39 +16,44 @@ Note: You do not _have_ to change anything. Chalk works out of the box. I do rec
 {% highlight yml %}
 # Mandatory settings
 
-baseurl: /
+blog_theme: light # Or use dark
 name: Chalk
 paginate: 25
 paginate_path: "/posts/page/:num/"
-url: http://chalk.nielsenramon.com # add site url http://example.com/
-blog_theme: light # Or use dark
+url: # add site url http://example.com/
 {% endhighlight %}
 
-* `baseurl`: Set baseurl to match the production URL without the host.
+* `blog_theme`: 2 options here, `light` or `dark`. Choose which design you prefer.
 * `name`: Used as the page title and throughout your project as the default name.
 * `paginate`: Define how much posts should be shown on the homepage for each page.
 * `paginate_path`: Change the path name to something else for paginated pages.
 * `url`: Your production url (http://example.com).
-* `blog_theme`: 2 options here, `light` or `dark`. Choose which design you prefer.
 
 ### Optional settings
 
 {% highlight yml %}
 # Optional settings
 
+about_enabled: false # Show about icon in navigation
 discus_identifier: # Add your Disqus identifier
-ga_analytics: # Add your GA Tracking Id
-rss_enabled: true # Change to false if not
+ga_analytics: # Add your GA Tracking ID
+logo_image: # Path to your logo
+rss_enabled: true # Use RSS feed
 social:
-  dribbble: # Add your Dribbble link
-  facebook: # Add your Facebook link
-  github: # Add your GitHub link
-  linkedin: # Add your LinkedIn link
+  dribbble: # Add your Dribbble handle
+  facebook: # Add your Facebook handle
+  flickr: # Add your Flickr handle
+  github: # Add your GitHub handle
+  linkedin: # Add your LinkedIn handle
   twitter: # Add your Twitter handle
+  email: # Add your Email address
+  bitcoin: # Add your Bitcoin link or address
 {% endhighlight %}
 
+* `about_enabled`: Change to true if you wish to show an icon in the navigation that redirects to the about page
 * `discus_identifier`: If you like to use Disqus for comments on each blog post, you can add the Disqus identifier here and it will popup automatically.
 * `ga_analytics`: Add Google Analytics Tracking ID here.
+* `logo_image`: Add path to your logo in .png instead of using text in the navigation and 404 page.
 * `rss_enabled`: When set to `true`, the rss icon in the top navigation will show up and people will be able to subscribe to your rss feed.
 * `social`: Add you social links in here. When filled in they will show up in the navigation.
 
