@@ -27,8 +27,8 @@ social:
 
 assets:
   compress:
-    css: true
-    js: true
+    css: default
+    js: default
   features:
     automatic_img_size: false
   sources:
